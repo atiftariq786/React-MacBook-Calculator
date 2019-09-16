@@ -5,7 +5,7 @@ const buttons = () => {
 
     return (
         <div>
-        <button>Click me!</button>
+        <button className="numButton">Click me!</button>
         </div>
     )
 }

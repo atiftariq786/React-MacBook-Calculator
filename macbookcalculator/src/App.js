@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Button from './components/Buttons';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <p>
           React MacBook Calculator
         </p>
+        <Button></Button>
         
       </header>
     </div>
