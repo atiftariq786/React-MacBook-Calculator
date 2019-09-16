@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Buttons = () => {
+const buttons = () => {
 
     return (
         <div>
@@ -10,4 +10,4 @@ const Buttons = () => {
     )
 }
 
-export default Buttons;
+export default buttons;
