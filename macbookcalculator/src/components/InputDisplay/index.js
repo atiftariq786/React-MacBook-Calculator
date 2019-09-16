@@ -5,7 +5,7 @@ const inputDisplay = () => {
 
     return (
         <div>
-        <button>Click me!</button>
+        
         </div>
     )
 }
