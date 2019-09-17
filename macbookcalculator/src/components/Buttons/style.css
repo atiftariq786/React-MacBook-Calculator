@@ -3,6 +3,9 @@
   }
 
 
+  .Col{
+      margin:0px;
+  }
 .numButton{
     width : 100%;
     height: 112px;

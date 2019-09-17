@@ -22,32 +22,32 @@ const buttons = (props) => {
     
         <Container className="container">
             <Row>              
-                <Col lg = {true}><button className="numButton">AC</button></Col> 
+                <Col lg ="3"><button className="numButton">AC</button></Col> 
                 <Col lg ="3"><button className="numButton">+/-</button></Col> 
                 <Col lg = "3"><button className="numButton">%</button></Col> 
                 <Col lg = "3"><button className="symButton">/</button></Col>      
         
             </Row>
             <Row>              
-                <Col><button className="numButton">7</button></Col> 
-                <Col><button className="numButton">8</button></Col> 
-                <Col><button className="numButton">9</button></Col> 
-                <Col><button className="symButton">*</button></Col>      
+                <Col lg ="3"><button className="numButton">7</button></Col> 
+                <Col lg ="3"><button className="numButton">8</button></Col> 
+                <Col lg ="3"><button className="numButton">9</button></Col> 
+                <Col lg ="3"><button className="symButton">*</button></Col>      
         
             </Row>
             <Row>              
-                <Col><button className="numButton">4</button></Col> 
-                <Col><button className="numButton">5</button></Col> 
-                <Col><button className="numButton">6</button></Col> 
-                <Col><button className="symButton">-</button></Col>      
+                <Col lg ="3"><button className="numButton">4</button></Col> 
+                <Col lg ="3"><button className="numButton">5</button></Col> 
+                <Col lg ="3"><button className="numButton">6</button></Col> 
+                <Col lg ="3"><button className="symButton">-</button></Col>      
         
             </Row>
             
              <Row>              
-                <Col><button className="numButton">1</button></Col> 
-                <Col><button className="numButton">2</button></Col> 
-                <Col><button className="numButton">3</button></Col> 
-                <Col><button className="symButton">+</button></Col>      
+                <Col lg ="3"><button className="numButton">1</button></Col> 
+                <Col lg ="3"><button className="numButton">2</button></Col> 
+                <Col lg ="3"><button className="numButton">3</button></Col> 
+                <Col lg ="3"><button className="symButton">+</button></Col>      
         
             </Row>
             <Row>              
