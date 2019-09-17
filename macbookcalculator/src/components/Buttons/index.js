@@ -22,10 +22,10 @@ const buttons = (props) => {
     
         <Container className="container">
             <Row>              
-                <Col><button className="numButton">AC</button></Col> 
-                <Col><button className="numButton">+/-</button></Col> 
-                <Col><button className="numButton">%</button></Col> 
-                <Col><button className="numButton">/</button></Col>      
+                <Col xs = "3"><button className="numButton">AC</button></Col> 
+                <Col xs ="3"><button className="numButton">+/-</button></Col> 
+                <Col xs = "3"><button className="numButton">%</button></Col> 
+                <Col xs = "3"><button className="numButton">/</button></Col>      
         
             </Row>
             <Row>              
