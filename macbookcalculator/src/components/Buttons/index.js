@@ -25,7 +25,7 @@ const buttons = (props) => {
                 <Col lg ="3"><button className="numButton">AC</button></Col> 
                 <Col lg ="3"><button className="numButton">+/-</button></Col> 
                 <Col lg = "3"><button className="numButton">%</button></Col> 
-                <Col lg = "3"><button className="symButton">/</button></Col>      
+                <Col lg ="3"><button className="symButton">/</button></Col>      
         
             </Row>
             <Row>              
