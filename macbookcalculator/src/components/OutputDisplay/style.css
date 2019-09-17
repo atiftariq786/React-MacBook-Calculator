@@ -1,18 +1,18 @@
 
 .output{
-    width : 1416px;
+   
     height: 120px;
     font-size: 100px;
     background: #858694;
     color: white;
     text-align: right;
-    flex: 0px 0px auto;
+    
     border : 1px white;
     margin:0px;
     padding:0px;
     font-weight: 200px;
     line-height: -20px;
-    flex: auto;
+   
     
 
 }
