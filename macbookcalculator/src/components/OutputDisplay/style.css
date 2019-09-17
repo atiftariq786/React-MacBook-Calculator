@@ -12,7 +12,7 @@
     padding:0px;
     font-weight: 200px;
     line-height: -20px;
-    flex: 0 0 auto;
-    display: inline-block;
+    flex: auto;
+    
 
 }

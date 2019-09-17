@@ -1,4 +1,8 @@
 import React from "react";
+
+import Container  from 'react-bootstrap/Container';
+import Row  from 'react-bootstrap/Row';
+import Col  from 'react-bootstrap/Col';
 import "./style.css";
 
 const buttons = (props) => {
@@ -15,40 +19,61 @@ const buttons = (props) => {
 */
 
     return (
-        <div className="container">
+    
+        <Container className="container">
+            <Row>              
+                <Col><button className="numButton">AC</button></Col> 
+                <Col><button className="numButton">+/-</button></Col> 
+                <Col><button className="numButton">%</button></Col> 
+                <Col><button className="numButton">/</button></Col>      
         
-        <div>
+            </Row>
+            <Row>              
+                <Col><button className="numButton">7</button></Col> 
+                <Col><button className="numButton">8</button></Col> 
+                <Col><button className="numButton">9</button></Col> 
+                <Col><button className="numButton">*</button></Col>      
+        
+            </Row>
+            <Row>              
+                <Col><button className="numButton">4</button></Col> 
+                <Col><button className="numButton">5</button></Col> 
+                <Col><button className="numButton">6</button></Col> 
+                <Col><button className="numButton">-</button></Col>      
+        
+            </Row>
+            <Row>              
+                <Col><button className="numButton">1</button></Col> 
+                <Col><button className="numButton">2</button></Col> 
+                <Col><button className="numButton">3</button></Col> 
+                <Col><button className="numButton">+</button></Col>      
+        
+            </Row>
+             <Row>              
+                <Col><button className="numButton">1</button></Col> 
+                <Col><button className="numButton">2</button></Col> 
+                <Col><button className="numButton">3</button></Col> 
+                <Col><button className="numButton">+</button></Col>      
+        
+            </Row>
+            <Row>              
+                <Col md={4}><button className="numButton">0</button></Col>                
+                <Col ><button className="numButton">.</button></Col> 
+                <Col><button className="numButton">=</button></Col>      
+    
+            </Row>
+
+        </Container>
+
         
 
-        <button className="numButton">AC</button>
-        <button className="numButton">+/-</button>
-        <button className="numButton">%</button>
-        <button className="numButton">/</button>
+        
 
-        <button className="numButton">7</button>
-        <button className="numButton">8</button>
-        <button className="numButton">9</button>
-        <button className="numButton">*</button>
-
-        <button className="numButton">4</button>
-        <button className="numButton">5</button>
-        <button className="numButton">6</button>
-        <button className="numButton">-</button>
-
-        <button className="numButton">1</button>
-        <button className="numButton">2</button>
-        <button className="numButton">3</button>
-        <button className="numButton">+</button>
-
-        <button className="numButton">0</button>
-        <button className="numButton">=</button>
-        <button className="numButton">=</button>
-        <button className="numButton">=</button>
-        </div>
+        
 
         
         
-        </div>
+    
     )
 }
 
