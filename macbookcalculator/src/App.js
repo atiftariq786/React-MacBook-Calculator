@@ -11,9 +11,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        <p>
-          React MacBook Calculator
-        </p>
         <OutputDisplay></OutputDisplay>
         <Button ></Button> 
        

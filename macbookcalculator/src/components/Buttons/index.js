@@ -20,7 +20,7 @@ const buttons = (props) => {
 
     return (
     
-        <Container className="container">
+        <Container className="container container">
             <Row>              
                 <Col lg ="3"><button className="numButton">AC</button></Col> 
                 <Col lg ="3"><button className="numButton">+/-</button></Col> 

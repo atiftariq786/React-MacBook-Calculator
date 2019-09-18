@@ -2,9 +2,15 @@
     flex-wrap: "nowrap | wrap | wrap-reverse";
     margin : auto 0px auto 0px ;
     padding:0px 0px 0px 0px;
+    min-width: auto;
+    
   }
   .col {
     padding:0px 0px 0px 0px;
+}
+.row {
+    margin:0px 0px 0px 0px;
+    width:100%;
 }
 
 .output{
@@ -17,7 +23,7 @@
     
     border : 1px white;
     margin : 0px 0px 0px 0px ;
-    padding:0px 0px 0px 0px ;
+    padding:0px 20px 0px 0px ;
     font-weight: 200px;
       
 
