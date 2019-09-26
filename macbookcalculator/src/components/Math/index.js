@@ -58,6 +58,16 @@ class Math extends Component {
     }  
 
   }
+  //================================Operator Handler=================================================    
+  operatorHandler = (operator) => {
+    console.log("Operator function activate")
+
+    this.setState ({
+        currentNumericInput : ""
+
+    })
+
+}
   //================================Numeric Handler=================================================
   numericHandler = (num) => {
     console.log("numeric function activate")
