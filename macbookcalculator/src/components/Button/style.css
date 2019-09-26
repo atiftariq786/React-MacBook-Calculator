@@ -46,3 +46,16 @@
     font-weight: bold;
 
 }
+.orange{
+    min-width: 100%;
+   
+    min-height: 16vh;
+    font-size: 70px;
+    text-align: center;
+    background: #f5923e;
+    color: #fff;  
+    font-weight: bold;
+
+    margin:0px 0px 0px 0px;
+      padding:0px 0px 0px 0px;
+}
