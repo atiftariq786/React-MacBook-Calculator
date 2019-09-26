@@ -45,8 +45,28 @@ class Math extends Component {
         return (
             
             <Container>
+            <Row>
+            <Output outputShow={this.state.outputDisplay || "0" }></Output>
+            </Row>
+            <Row>
+            {  this.state.inputNumbers.map((btnSymbol,id) =>{
+                //console.log("Index :" + id, btnSymbol)
+                
+                return (                    
+                   
+                <Button 
+                symbol={btnSymbol.num} 
+                color={btnSymbol.color} 
+                click = {()=>this.clickHandler(btnSymbol.num)}
+                key ={id}
+                
+                ></Button>                  
+                
+                );
+            })}
             
             
+            </Row>         
             
             
             </Container>
