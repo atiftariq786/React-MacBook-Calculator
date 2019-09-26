@@ -39,6 +39,16 @@ class Math extends Component {
                    
     }
 
+    //================================Click Handler=================================================
+   clickHandler = (input)=>{
+    console.log("button  clicked")
+    console.log("Input value: "+input);
+    let currentInputValue = input;
+
+    
+
+  }
+
     render(){
        
 
