@@ -65,6 +65,15 @@ class Math extends Component {
 
     let checkNumeric = this.state.currentNumericInput + num;
  
+this.setState ({
+    currentNumericInput :  checkNumeric
+
+})
+
+    
+// let preValue = numeric;
+
+//this.resultHandler(checkNumeric)
 
    
 
