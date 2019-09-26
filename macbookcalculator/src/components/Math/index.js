@@ -49,7 +49,7 @@ class Math extends Component {
     if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "*" 
     || currentInputValue === "/" || currentInputValue === "%"||currentInputValue === "="
     || currentInputValue === "+/-" || currentInputValue === "AC"){
-        
+        //this.operatorHandler(currentInputValue)
     } 
     else{
         this.numericHandler(currentInputValue);
@@ -58,6 +58,17 @@ class Math extends Component {
     }  
 
   }
+  //================================Numeric Handler=================================================
+  numericHandler = (num) => {
+    console.log("numeric function activate")
+    console.log({num})
+
+    let checkNumeric = this.state.currentNumericInput + num;
+ 
+
+   
+
+}
 
     render(){
        
