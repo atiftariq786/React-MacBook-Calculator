@@ -45,7 +45,17 @@ class Math extends Component {
     console.log("Input value: "+input);
     let currentInputValue = input;
 
-    
+    //Check input---------------------------
+    if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "*" 
+    || currentInputValue === "/" || currentInputValue === "%"||currentInputValue === "="
+    || currentInputValue === "+/-" || currentInputValue === "AC"){
+        
+    } 
+    else{
+        this.numericHandler(currentInputValue);
+        
+        
+    }  
 
   }
 
