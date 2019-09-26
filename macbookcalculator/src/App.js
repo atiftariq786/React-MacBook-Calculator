@@ -1,22 +1,21 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Button from './components/Buttons';
-import OutputDisplay from './components/OutputDisplay';
+import Math from './components/Math';
+//import OutputDisplay from './components/OutputDisplay';
 
 function App() {
 
   
   return (
     <div className="App">
-      <header className="App-header">
+     
+      <h2>React MacBook Calculator </h2>
         
-        <OutputDisplay></OutputDisplay>
-        <Button ></Button> 
+      <Math></Math>
        
         
-        
-      </header>
+     
     </div>
   );
 }

@@ -1,23 +1,26 @@
+
 import React from "react";
-import Container  from 'react-bootstrap/Container';
-import Row  from 'react-bootstrap/Row';
+//import Container  from 'react-bootstrap/Container';
+//import Row  from 'react-bootstrap/Row';
 import Col  from 'react-bootstrap/Col';
+//import Button from "../Buttons/index";
+//import Input from "../InputDisplay/index";
 import "./style.css";
+
 
 const outputDisplay = (props) => {
     
-        
-
+    
     return (
-        <Container className="container">
-            <Row>              
-                <Col><p className="output">AC</p></Col> 
-                    
         
-            </Row>
-        </Container>
+                <Col>  
+                    <p className= "output">{props.outputShow}</p>                                       
+                </Col>    
+        
+          
         
     )
 }
 
 export default outputDisplay;
+

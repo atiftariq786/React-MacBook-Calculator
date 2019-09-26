@@ -1,32 +1,42 @@
-import React from "react";
+import React, {Component} from "react";
 
 import Container  from 'react-bootstrap/Container';
 import Row  from 'react-bootstrap/Row';
 import Col  from 'react-bootstrap/Col';
 import "./style.css";
+import Output from "../OutputDisplay/index";
 
-const buttons = (props) => {
+class Buttons extends Component{
 
-/*
+    state = {
+        outputDisplay : 0
+    }
 
-<div>
-        <button className="symButton">+</button>
-        <button className="symButton">+</button>
-        <button className="symButton">+</button>
-        <button className="symButton">+</button>
-        <button className="symButton">+</button>
-        </div>
-*/
+    numClickHandler = (num)=>{
 
+        this.setState({
+            outputDisplay : num
+        })
+
+    }
+render(){
+    
     return (
+
+        
     
         <Container className="container container">
+        
+        
+            <Row>              
+                <Output outputShow={this.state.outputDisplay}>></Output>
+                  
+            </Row>
             <Row>              
                 <Col lg ="3"><button className="numButton">AC</button></Col> 
                 <Col lg ="3"><button className="numButton">+/-</button></Col> 
                 <Col lg = "3"><button className="numButton">%</button></Col> 
                 <Col lg ="3"><button className="symButton">/</button></Col>      
-        
             </Row>
             <Row>              
                 <Col lg ="3"><button className="numButton">7</button></Col> 
@@ -41,34 +51,23 @@ const buttons = (props) => {
                 <Col lg ="3"><button className="numButton">6</button></Col> 
                 <Col lg ="3"><button className="symButton">-</button></Col>      
         
-            </Row>
-            
+            </Row>            
              <Row>              
-                <Col lg ="3"><button className="numButton">1</button></Col> 
+                <Col lg ="3"><button className="numButton"onClick ={()=>this.numClickHandler(1)}>1</button></Col> 
                 <Col lg ="3"><button className="numButton">2</button></Col> 
                 <Col lg ="3"><button className="numButton">3</button></Col> 
-                <Col lg ="3"><button className="symButton">+</button></Col>      
-        
+                <Col lg ="3"><button className="symButton">+</button></Col>    
             </Row>
             <Row>              
                 <Col md={6}><button className="numButton">0</button></Col>                
                 <Col md={3}><button className="numButton">.</button></Col> 
                 <Col md={3}><button className="symButton">=</button></Col>      
-    
             </Row>
 
-        </Container>
-
+        </Container>      
         
-
-        
-
-        
-
-        
-        
-    
     )
 }
+}
 
-export default buttons;
+export default Buttons;

@@ -1,0 +1,30 @@
+.contain{
+    
+    margin : auto 0px auto 0px ;
+    padding:0px 0px 0px 0px;
+    background: lightsalmon;
+    width: 350px;
+    
+
+    
+}
+
+/*
+.container{
+    flex-wrap: "nowrap | wrap | wrap-reverse";
+    margin : auto 0px auto 0px ;
+    padding:0px 0px 0px 0px;
+    min-width: auto;
+}
+
+.col-lg-3 {
+    padding:0px 0px 0px 0px;
+}
+.col-md-6, .col-md-3, .col-md-3{
+  padding:0px 0px 0px 0px;
+
+}
+.row {
+  margin:0px 0px 0px 0px;
+}
+*/
