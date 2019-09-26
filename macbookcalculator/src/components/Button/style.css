@@ -28,3 +28,21 @@
   margin:0px 0px 0px 0px;
 }
 */
+.col-3 {
+    padding:0px 0px 0px 0px;
+}
+
+.col-wide{
+    color:black;
+    min-width: 100%;
+    min-height: 16vh;
+    font-size: 70px;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    
+    text-align: center;
+    background: #e0e0e0;
+    color: black;
+    font-weight: bold;
+
+}
