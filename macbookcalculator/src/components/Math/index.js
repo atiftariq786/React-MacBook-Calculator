@@ -73,10 +73,22 @@ this.setState ({
     
 // let preValue = numeric;
 
-//this.resultHandler(checkNumeric)
+this.resultHandler(checkNumeric)
 
    
 
+}
+//================================Result Handler=================================================
+resultHandler = (displayNum) => {
+    console.log("Result function activate")
+    
+    
+    //<Display value={this.state.next || this.state.total || "0"} />
+    //console.log({displayNum})
+    this.setState ({
+        outputDisplay : displayNum//this.state.currentNumericInput,
+       // saveValue : currentInputValue
+    })
 }
 
     render(){
