@@ -114,7 +114,17 @@ class Math extends Component {
 
             let multiplyResult = (parseInt(this.state.total) * parseInt(this.state.currentInputValue));
             console.log(multiplyResult)
-            
+            this.setState({
+            // update total state
+            total : multiplyResult,
+            // clear currentNumericInput state
+            currentNumericInput : "",
+            //currentInputValue : multiplyResult,
+            // update prevOperator state
+            prevOperator : operator,
+            outputDisplay: multiplyResult
+                
+            })               
             return multiplyResult;
         } 
         else{
