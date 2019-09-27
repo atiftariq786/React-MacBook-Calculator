@@ -95,7 +95,17 @@ class Math extends Component {
 
             let subtractResult = parseInt(this.state.total) - parseInt(this.state.currentInputValue);
             console.log(subtractResult);
-           
+            this.setState({
+            // update total state
+            total : subtractResult,
+            // clear currentNumericInput state
+            currentNumericInput : "",
+            //currentInputValue : additionResult,
+            // update prevOperator state
+            prevOperator : operator,
+            outputDisplay: subtractResult
+                
+            })        
 
             return subtractResult;
         } /*
