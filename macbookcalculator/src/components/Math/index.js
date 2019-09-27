@@ -14,11 +14,11 @@ class Math extends Component {
             { id : "cal1", num: "AC", color:"white"},
             { id : "cal2", num: "+/-", color:"white"},
             { id : "cal3", num: "%", color:"white"},
-            { id : "cal4", num: "/", color:"orange"},
+            { id : "cal4", num: "÷", color:"orange"},
             { id : "cal5", num: 7, color:"white"},
             { id : "cal6", num: 8, color:"white"},
             { id : "cal7", num: 9, color:"white"},
-            { id : "cal8", num: "*", color:"orange"},
+            { id : "cal8", num: "×", color:"orange"},
             { id : "cal9", num: 4, color:"white"},
             { id : "cal10", num: 5, color:"white"},
             { id : "cal11", num: 6, color:"white"},
@@ -31,7 +31,9 @@ class Math extends Component {
             { id : "cal18", num: ".", color:"white"},
             { id : "cal19", num: "=", color:"orange"}],
             currentNumericInput: "",    
-            outputDisplay : ""        
+            outputDisplay : "",
+            total : "",
+            prevOperator : ""
                     
         }
 
@@ -42,10 +44,25 @@ class Math extends Component {
         let currentInputValue = input;
 
         //Check input---------------------------
-        if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "*" 
-        || currentInputValue === "/" || currentInputValue === "%"||currentInputValue === "="
-        || currentInputValue === "+/-" || currentInputValue === "AC"){
+        if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "×" 
+        || currentInputValue === "÷" || currentInputValue === "%"||currentInputValue === "="
+        || currentInputValue === "+/-"){
             this.operatorHandler(currentInputValue)
+        }
+        else if(currentInputValue === "AC"){
+
+            console.log("All values cleared...! ")
+            
+
+            this.setState({
+                currentNumericInput : 0,
+                currentInputValue : 0,
+                total : 0,
+                outputDisplay : 0,
+                prevOperator : null 
+
+            })      
+
         } 
         else{
             this.numericHandler(currentInputValue);          
@@ -55,6 +72,74 @@ class Math extends Component {
     //================================Operator Handler=================================================    
     operatorHandler = (operator) => {
         console.log("Operator function activate")
+
+        if(this.state.prevOperator === "+" ){
+            console.log("OperatorHandler Addition");
+            let additionResult = parseInt(this.state.total) + parseInt(this.state.outputDisplay);
+            console.log(additionResult);
+
+            //additionResult = additionResult.parseInt(additionResult);
+
+            //console.log(additionResult);
+
+            this.setState({
+                // update total state
+            total : additionResult,
+            // update currentInputValue state
+            currentNumericInput : "",
+            //currentInputValue : additionResult,
+            // update prevOperator state
+            prevOperator : operator,
+            outputDisplay: additionResult
+                
+            })           
+
+            return additionResult;
+        }
+        /*
+        else if(this.state.prevOperator === "-" ){
+            console.log("OperatorHandler Subtraction");
+
+            let subtractResult = this.state.total - this.state.currentInputValue;
+
+            this.setState({
+                // update total state
+            total : subtractResult,
+            // update currentInputValue state
+            currentInputValue : subtractResult,
+            // update prevOperator state
+            prevOperator : operator
+                
+            })        
+
+            return subtractResult;
+        }
+        else if(this.state.prevOperator === "×" ){
+            console.log("OperatorHandler Multiplication");
+
+            let multiplyResult = this.state.total * this.state.currentInputValue;
+            this.setState({
+                // update total state
+            total : multiplyResult,
+            // update currentInputValue state
+            currentInputValue : multiplyResult,
+            // update prevOperator state
+            prevOperator : operator
+                
+            })               
+            return multiplyResult;
+        } */
+        else{
+            console.log("previous operator null")
+            if(!this.state.prevOperator ){
+                this.setState({
+                    total: this.state.currentNumericInput,
+                    prevOperator : operator
+                    //outputDisplay : this.state.currentNumericInput
+
+                })
+            }
+        }
 
         this.setState ({
             currentNumericInput : ""
@@ -70,7 +155,7 @@ class Math extends Component {
         let checkNumeric = this.state.currentNumericInput + num;
     
         this.setState ({
-            currentNumericInput :  checkNumeric
+            currentNumericInput : checkNumeric
 
         })
 
