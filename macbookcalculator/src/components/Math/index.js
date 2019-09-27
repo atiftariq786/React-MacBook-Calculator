@@ -60,14 +60,11 @@ class Math extends Component {
                 total : 0,
                 outputDisplay : 0,
                 prevOperator : null 
-
             })      
-
         } 
         else{
             this.numericHandler(currentInputValue);          
         }  
-
     }
     //================================Operator Handler=================================================    
     operatorHandler = (operator) => {
@@ -76,16 +73,12 @@ class Math extends Component {
         if(this.state.prevOperator === "+" ){
             console.log("OperatorHandler Addition");
             let additionResult = parseInt(this.state.total) + parseInt(this.state.outputDisplay);
-            console.log(additionResult);
-
-            //additionResult = additionResult.parseInt(additionResult);
-
-            //console.log(additionResult);
+            console.log(additionResult);            
 
             this.setState({
-                // update total state
+            // update total state
             total : additionResult,
-            // update currentInputValue state
+            // clear currentNumericInput state
             currentNumericInput : "",
             //currentInputValue : additionResult,
             // update prevOperator state
@@ -96,24 +89,16 @@ class Math extends Component {
 
             return additionResult;
         }
-        /*
+        
         else if(this.state.prevOperator === "-" ){
             console.log("OperatorHandler Subtraction");
 
-            let subtractResult = this.state.total - this.state.currentInputValue;
-
-            this.setState({
-                // update total state
-            total : subtractResult,
-            // update currentInputValue state
-            currentInputValue : subtractResult,
-            // update prevOperator state
-            prevOperator : operator
-                
-            })        
+            let subtractResult = parseInt(this.state.total) - parseInt(this.state.currentInputValue);
+            console.log(subtractResult);
+           
 
             return subtractResult;
-        }
+        } /*
         else if(this.state.prevOperator === "×" ){
             console.log("OperatorHandler Multiplication");
 
@@ -135,8 +120,7 @@ class Math extends Component {
                 this.setState({
                     total: this.state.currentNumericInput,
                     prevOperator : operator
-                    //outputDisplay : this.state.currentNumericInput
-
+                   
                 })
             }
         }
