@@ -131,7 +131,17 @@ class Math extends Component {
 
             let divisionResult = (parseInt(this.state.total) / parseInt(this.state.currentNumericInput));
             console.log(divisionResult)
-                   
+            this.setState({
+            // update total state
+            total : divisionResult,
+            // clear currentNumericInput state
+            currentNumericInput : "",
+            //currentInputValue : divisionResult,
+            // update prevOperator state
+            prevOperator : operator,
+            outputDisplay: divisionResult
+                
+            })               
             return divisionResult;
         } 
         else{
