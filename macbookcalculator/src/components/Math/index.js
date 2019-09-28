@@ -126,7 +126,14 @@ class Math extends Component {
             })               
             return multiplyResult;
         } 
-        
+        else if(this.state.prevOperator === "÷" ){
+            console.log("OperatorHandler Multiplication");
+
+            let divisionResult = (parseInt(this.state.total) / parseInt(this.state.currentNumericInput));
+            console.log(divisionResult)
+                   
+            return divisionResult;
+        } 
         else{
             console.log("previous operator null")
             if(!this.state.prevOperator ){
