@@ -68,7 +68,8 @@ class Math extends Component {
     //================================Operator Handler=================================================    
     operatorHandler = (operator) => {
         console.log("Operator function activate")
-
+        
+        //Addition------------------------------
         if(this.state.prevOperator === "+" ){
             console.log("OperatorHandler Addition");
             let additionResult = parseInt(this.state.total) + parseInt(this.state.currentNumericInput);
@@ -81,14 +82,14 @@ class Math extends Component {
             currentNumericInput : "",
             //currentInputValue : additionResult,
             // update prevOperator state
-            prevOperator : operator,
+            prevOperator : this.equalHandler(operator),
             outputDisplay: additionResult
                 
             })           
 
             return additionResult;
         }
-        
+        //Subtraction------------------------------
         else if(this.state.prevOperator === "-" ){
             console.log("OperatorHandler Subtraction");
 
@@ -101,13 +102,14 @@ class Math extends Component {
             currentNumericInput : "",
             //currentInputValue : additionResult,
             // update prevOperator state
-            prevOperator : operator,
+            prevOperator : this.equalHandler(operator),
             outputDisplay: subtractResult
                 
             })        
 
             return subtractResult;
         } 
+        //Multiplication------------------------------
         else if(this.state.prevOperator === "×" ){
             console.log("OperatorHandler Multiplication");
 
@@ -120,14 +122,15 @@ class Math extends Component {
             currentNumericInput : "",
             //currentInputValue : multiplyResult,
             // update prevOperator state
-            prevOperator : operator,
+            prevOperator : this.equalHandler(operator) ,
             outputDisplay: multiplyResult
                 
             })               
             return multiplyResult;
         } 
+        //Division------------------------------
         else if(this.state.prevOperator === "÷" ){
-            console.log("OperatorHandler Multiplication");
+            console.log("OperatorHandler Division");
 
             let divisionResult = (parseInt(this.state.total) / parseInt(this.state.currentNumericInput));
             console.log(divisionResult)
@@ -138,12 +141,13 @@ class Math extends Component {
             currentNumericInput : "",
             //currentInputValue : divisionResult,
             // update prevOperator state
-            prevOperator : operator,
+            prevOperator :this.equalHandler(operator) ,
             outputDisplay: divisionResult
                 
             })               
             return divisionResult;
         } 
+       
         else{
             console.log("previous operator null")
             if(!this.state.prevOperator ){
@@ -154,7 +158,7 @@ class Math extends Component {
                 })
             }
         }
-
+        //Testing------------------------------
         this.setState ({
             currentNumericInput : ""
 
@@ -186,6 +190,21 @@ class Math extends Component {
         
         })
     }
+    //================================Equal Handler=================================================
+    equalHandler = (operator) =>{
+        console.log("Equal function activate");
+
+        if(operator === "="){
+            this.setState ({
+                prevOperator : ""
+            
+            })
+            return null;
+        }
+        
+        return operator;       
+    }
+    //================================Render()=====================================================
     render(){
         
         return (
