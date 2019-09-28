@@ -18,7 +18,7 @@ class Math extends Component {
             { id : "cal5", num: 7, color:"white"},
             { id : "cal6", num: 8, color:"white"},
             { id : "cal7", num: 9, color:"white"},
-            { id : "cal8", num: "*", color:"orange"},
+            { id : "cal8", num: "×", color:"orange"},
             { id : "cal9", num: 4, color:"white"},
             { id : "cal10", num: 5, color:"white"},
             { id : "cal11", num: 6, color:"white"},
@@ -32,7 +32,7 @@ class Math extends Component {
             { id : "cal19", num: "=", color:"orange"}],
             currentNumericInput: "",    
             outputDisplay : "",
-            total : "",
+            total : 0,
             prevOperator : ""
                     
         }
@@ -44,7 +44,7 @@ class Math extends Component {
         let currentInputValue = input;
 
         //Check input---------------------------
-        if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "*" 
+        if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "×" 
         || currentInputValue === "÷" || currentInputValue === "%"||currentInputValue === "="
         || currentInputValue === "+/-"){
             this.operatorHandler(currentInputValue)
@@ -55,10 +55,9 @@ class Math extends Component {
             
 
             this.setState({
-                currentNumericInput : 0,
-                currentInputValue : 0,
+                currentNumericInput : "",
                 total : 0,
-                outputDisplay : 0,
+                outputDisplay : "",
                 prevOperator : null 
             })      
         } 
@@ -72,7 +71,7 @@ class Math extends Component {
 
         if(this.state.prevOperator === "+" ){
             console.log("OperatorHandler Addition");
-            let additionResult = parseInt(this.state.total) + parseInt(this.state.outputDisplay);
+            let additionResult = parseInt(this.state.total) + parseInt(this.state.currentNumericInput);
             console.log(additionResult);            
 
             this.setState({
@@ -93,7 +92,7 @@ class Math extends Component {
         else if(this.state.prevOperator === "-" ){
             console.log("OperatorHandler Subtraction");
 
-            let subtractResult = parseInt(this.state.total) - parseInt(this.state.currentInputValue);
+            let subtractResult = parseInt(this.state.total) - parseInt(this.state.currentNumericInput);
             console.log(subtractResult);
             this.setState({
             // update total state
@@ -109,10 +108,10 @@ class Math extends Component {
 
             return subtractResult;
         } 
-        else if(this.state.prevOperator === "*" ){
+        else if(this.state.prevOperator === "×" ){
             console.log("OperatorHandler Multiplication");
 
-            let multiplyResult = (parseInt(this.state.total) * parseInt(this.state.currentInputValue));
+            let multiplyResult = (parseInt(this.state.total) * parseInt(this.state.currentNumericInput));
             console.log(multiplyResult)
             this.setState({
             // update total state
@@ -127,6 +126,7 @@ class Math extends Component {
             })               
             return multiplyResult;
         } 
+        
         else{
             console.log("previous operator null")
             if(!this.state.prevOperator ){
