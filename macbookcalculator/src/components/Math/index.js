@@ -65,7 +65,7 @@ class Math extends Component {
             }
         
         }
-        else if(currentInputValue === "C" ){
+        else if(currentInputValue === "C" || currentInputValue === "AC" ){
 
             console.log("All values cleared...! ")            
             tempInputNumbers[0].num = 'AC';            
