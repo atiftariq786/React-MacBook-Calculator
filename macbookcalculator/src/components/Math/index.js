@@ -43,6 +43,9 @@ class Math extends Component {
         console.log("button  clicked")
         console.log("Input value: "+input);
         let currentInputValue = input;
+
+        
+
        // "AC" button replace by "C" when input true
         const tempInputNumbers = this.state.inputNumbers
             tempInputNumbers[0].num = 'C'
@@ -55,10 +58,14 @@ class Math extends Component {
          if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "×" 
         || currentInputValue === "÷" || currentInputValue === "%"||currentInputValue === "="
         || currentInputValue === "+/-"){
-            this.operatorHandler(currentInputValue)
+           
+
+            if(this.state.currentNumericInput !== ""){
+                this.operatorHandler(currentInputValue)
+            }
         
         }
-        else if(currentInputValue === "C"){
+        else if(currentInputValue === "C" ){
 
             console.log("All values cleared...! ")            
             tempInputNumbers[0].num = 'AC';            
@@ -72,7 +79,7 @@ class Math extends Component {
             })      
         } 
         else{
-            this.numericHandler(currentInputValue);          
+            this.numericHandler(currentInputValue);        
                      
         }  
     }
