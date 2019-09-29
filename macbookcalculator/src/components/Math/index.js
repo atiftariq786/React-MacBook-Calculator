@@ -43,13 +43,24 @@ class Math extends Component {
         console.log("Input value: "+input);
         let currentInputValue = input;
 
+       /* if(currentInputValue){
+
+            this.setState({
+                "inputNumbers[0].num" : "C" 
+            })
+
+        }*/
+
         //Check input---------------------------
-        if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "×" 
+         if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "×" 
         || currentInputValue === "÷" || currentInputValue === "%"||currentInputValue === "="
         || currentInputValue === "+/-"){
             this.operatorHandler(currentInputValue)
+            this.setState({
+                "inputNumbers[0].num" : "C" 
+            })
         }
-        else if(currentInputValue === "AC"){
+        else if(currentInputValue === "AC" ||currentInputValue === "C"){
 
             console.log("All values cleared...! ")
             
@@ -58,11 +69,16 @@ class Math extends Component {
                 currentNumericInput : "",
                 total : 0,
                 outputDisplay : "",
-                prevOperator : null 
+                prevOperator : null ,
+                "inputNumbers[0].num" : "AC" 
             })      
         } 
         else{
-            this.numericHandler(currentInputValue);          
+            this.numericHandler(currentInputValue); 
+            this.setState({
+                "inputNumbers[0].num" : "C" 
+            })
+                     
         }  
     }
     //================================Operator Handler=================================================    
@@ -72,7 +88,7 @@ class Math extends Component {
         //Addition------------------------------
         if(this.state.prevOperator === "+" ){
             console.log("OperatorHandler Addition");
-            let additionResult = parseInt(this.state.total) + parseInt(this.state.currentNumericInput);
+            let additionResult = parseFloat(this.state.total) + parseFloat(this.state.currentNumericInput);
             console.log(additionResult);            
 
             this.setState({
@@ -93,7 +109,7 @@ class Math extends Component {
         else if(this.state.prevOperator === "-" ){
             console.log("OperatorHandler Subtraction");
 
-            let subtractResult = parseInt(this.state.total) - parseInt(this.state.currentNumericInput);
+            let subtractResult = parseFloat(this.state.total) - parseFloat(this.state.currentNumericInput);
             console.log(subtractResult);
             this.setState({
             // update total state
@@ -113,7 +129,7 @@ class Math extends Component {
         else if(this.state.prevOperator === "×" ){
             console.log("OperatorHandler Multiplication");
 
-            let multiplyResult = (parseInt(this.state.total) * parseInt(this.state.currentNumericInput));
+            let multiplyResult = (parseFloat(this.state.total) * parseFloat(this.state.currentNumericInput));
             console.log(multiplyResult)
             this.setState({
             // update total state
@@ -132,7 +148,7 @@ class Math extends Component {
         else if(this.state.prevOperator === "÷" ){
             console.log("OperatorHandler Division");
 
-            let divisionResult = (parseInt(this.state.total) / parseInt(this.state.currentNumericInput));
+            let divisionResult = (parseFloat(this.state.total) / parseFloat(this.state.currentNumericInput));
             console.log(divisionResult)
             this.setState({
             // update total state
@@ -147,15 +163,64 @@ class Math extends Component {
             })               
             return divisionResult;
         } 
+        //Percentage------------------------------
+        else if(operator === "%" ){
+            console.log("OperatorHandler Percentage");
+
+            let percentageResult = (parseFloat(this.state.currentNumericInput)/ 100 );
+            console.log(percentageResult)
+            this.setState({
+            // update total state
+            total : percentageResult,
+            // clear currentNumericInput state
+            currentNumericInput : "",
+            //currentInputValue : divisionResult,
+            // update prevOperator state
+            prevOperator :this.equalHandler(operator) ,
+            outputDisplay: percentageResult
+                
+            })             
+            return percentageResult;
+        } 
+        //Positive/ negative sign------------------------------
+        else if(operator === "+/-" ){
+            console.log("OperatorHandler pos/neg sign");
+
+            let positiveNegResult = (parseFloat(this.state.currentNumericInput) * -1 );
+            console.log(positiveNegResult)
+            this.setState({
+            // update total state
+            total : positiveNegResult,
+            // clear currentNumericInput state
+            currentNumericInput : "",            
+            // update prevOperator state
+            prevOperator :this.equalHandler(operator) ,
+            outputDisplay: positiveNegResult
+                
+            })              
+            return positiveNegResult;
+        } 
        
         else{
             console.log("previous operator null")
             if(!this.state.prevOperator ){
-                this.setState({
-                    total: this.state.currentNumericInput,
-                    prevOperator : operator
-                   
-                })
+
+                if(this.state.currentNumericInput){
+                    this.setState({
+                        total: this.state.currentNumericInput,
+                        prevOperator : operator
+                       
+                    })
+
+                }
+                else{
+                    this.setState({
+                        
+                        prevOperator : operator
+                       
+                    })   
+                }
+                
             }
         }
         //Testing------------------------------
@@ -194,7 +259,21 @@ class Math extends Component {
     equalHandler = (operator) =>{
         console.log("Equal function activate");
 
-        if(operator === "="){
+        if(operator === "=" ){
+            this.setState ({
+                prevOperator : ""
+            
+            })
+            return null;
+        }
+       else if(operator === "%"){
+            this.setState ({
+                prevOperator : ""
+            
+            })
+            return null;
+        }
+        else if(operator === "+/-"){
             this.setState ({
                 prevOperator : ""
             
@@ -218,6 +297,7 @@ class Math extends Component {
                         //console.log("Index :" + id, btnSymbol)                
                         return (                   
                         <Button 
+                       
                         symbol={btnSymbol.num} 
                         color={btnSymbol.color} 
                         click = {()=>this.clickHandler(btnSymbol.num)}

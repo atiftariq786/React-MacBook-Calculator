@@ -9,18 +9,28 @@ import "./style.css";
 const button = (props) => {
     
     let gridSys = props.color; // props.color required to change suitable name
+    let symbol = props.symbol;
+
+    if(props.click === true && props.key !== "cal1"){
+        symbol = "C";
+    }
+    else{
+       // symbol = "AC";
+    }
     
     if(gridSys === "col-wide"){
-
         gridSys = 6;
     }
+
     else{
         gridSys = 3;
     }
+
+    
     
     return (
             <Col xs ={gridSys}>
-            <button className ={props.color} onClick = {props.click}>{props.symbol}</button>
+            <button className ={props.color} onClick = {props.click}>{symbol}</button>
             
             
             </Col>
