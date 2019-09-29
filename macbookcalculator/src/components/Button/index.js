@@ -1,14 +1,11 @@
 
 import React from "react";
-//import Container  from 'react-bootstrap/Container';
-//import Row  from 'react-bootstrap/Row';
 import Col  from 'react-bootstrap/Col';
-
 import "./style.css";
 
 const button = (props) => {
     
-    let gridSys = props.color; // props.color required to change suitable name     
+    let gridSys = props.color;     
    
     if(gridSys === "col-wide"){
         gridSys = 6;
@@ -17,14 +14,11 @@ const button = (props) => {
         gridSys = 3;
     }   
     
-    return (
-            <Col xs ={gridSys}>
-            <button className ={props.color} onClick = {props.click}>{props.symbol}</button>
-                        
-            </Col>                                                            
-           
+return (
+        <Col xs ={gridSys}>
+            <button className ={props.color} onClick = {props.click}>{props.symbol}</button>                        
+        </Col>                                                           
     )    
 }
-
 export default button;
 
