@@ -30,6 +30,7 @@ class Math extends Component {
             { id : "cal17", num: 0, color:"col-wide"},
             { id : "cal18", num: ".", color:"white"},
             { id : "cal19", num: "=", color:"orange"}],
+            
             currentNumericInput: "",    
             outputDisplay : "",
             total : 0,
@@ -42,42 +43,36 @@ class Math extends Component {
         console.log("button  clicked")
         console.log("Input value: "+input);
         let currentInputValue = input;
-
-       /* if(currentInputValue){
-
+       // "AC" button replace by "C" when input true
+        const tempInputNumbers = this.state.inputNumbers
+            tempInputNumbers[0].num = 'C'
+            
             this.setState({
-                "inputNumbers[0].num" : "C" 
+                inputNumbers : tempInputNumbers
             })
-
-        }*/
 
         //Check input---------------------------
          if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "×" 
         || currentInputValue === "÷" || currentInputValue === "%"||currentInputValue === "="
         || currentInputValue === "+/-"){
             this.operatorHandler(currentInputValue)
-            this.setState({
-                "inputNumbers[0].num" : "C" 
-            })
+        
         }
-        else if(currentInputValue === "AC" ||currentInputValue === "C"){
+        else if(currentInputValue === "C"){
 
-            console.log("All values cleared...! ")
-            
+            console.log("All values cleared...! ")            
+            tempInputNumbers[0].num = 'AC';            
 
             this.setState({
                 currentNumericInput : "",
                 total : 0,
                 outputDisplay : "",
                 prevOperator : null ,
-                "inputNumbers[0].num" : "AC" 
+                inputNumbers : tempInputNumbers
             })      
         } 
         else{
-            this.numericHandler(currentInputValue); 
-            this.setState({
-                "inputNumbers[0].num" : "C" 
-            })
+            this.numericHandler(currentInputValue);          
                      
         }  
     }
@@ -297,7 +292,7 @@ class Math extends Component {
                         //console.log("Index :" + id, btnSymbol)                
                         return (                   
                         <Button 
-                       
+                        //reset = {this.inputNumbers[0].num}
                         symbol={btnSymbol.num} 
                         color={btnSymbol.color} 
                         click = {()=>this.clickHandler(btnSymbol.num)}
