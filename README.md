@@ -10,7 +10,7 @@ This is a Macbook basic calculator version based on some technologies given belo
 *   **NPM** for installation of packages required by the app.
 
 ##  :tv:App Demo Link
-[Watch React MacBook Calculator Demo](https://atiftariq786.github.io)
+[Live Demo](https://atiftariq786.github.io/React-MacBook-Calculator/)
 
 ##  :camera:App Images
 ![MacBook Calculator Image](https://github.com/atiftariq786/React-MacBook-Calculator/blob/master/macbookcalculator/src/assets/images/MacBookCal.png?raw=true)
