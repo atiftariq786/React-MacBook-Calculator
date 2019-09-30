@@ -31,6 +31,8 @@ This is a Macbook basic calculator version based on some new technologies given 
 
 ## :gem: Author
     Atif Tariq
-    [Github](https://github.com/atiftariq786)
-    [Linkedin](https://www.linkedin.com/in/atif-tariq-5b00b089/)
+    [Github]("https://github.com/atiftariq786")
+    Github-https://github.com/atiftariq786
+    
+    <a href"https://www.linkedin.com/in/atif-tariq-5b00b089/"> Linkedin</a>
     
