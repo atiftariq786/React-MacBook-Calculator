@@ -30,7 +30,7 @@ To run this app on your machine, follow these instructions.
 *   [React developers tools chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 
 ## :gem: Author
-    Atif Tariq    
+Atif Tariq    
   :link:[Github](https://github.com/atiftariq786)
   :link:[Linkedin](https://www.linkedin.com/in/atif-tariq-5b00b089/)
 
