@@ -5,7 +5,7 @@ import "./style.css";
 
 const button = (props) => {
     
-    let gridSys = props.color;     
+    let gridSys = props.btnClass;     
    
     if(gridSys === "col-wide"){
         gridSys = 6;
@@ -16,7 +16,7 @@ const button = (props) => {
     
 return (
         <Col xs ={gridSys}>
-            <button className ={props.color} onClick = {props.click}>{props.symbol}</button>                        
+            <button className ={props.btnClass} onClick = {props.click}>{props.symbol}</button>                        
         </Col>                                                           
     )    
 }

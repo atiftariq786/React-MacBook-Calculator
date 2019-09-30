@@ -10,25 +10,25 @@ class Math extends Component {
 
         state = {
             inputNumbers :[
-            { id : "cal1", num: "AC", color:"white"},
-            { id : "cal2", num: "+/-", color:"white"},
-            { id : "cal3", num: "%", color:"white"},
-            { id : "cal4", num: "÷", color:"orange"},
-            { id : "cal5", num: 7, color:"white"},
-            { id : "cal6", num: 8, color:"white"},
-            { id : "cal7", num: 9, color:"white"},
-            { id : "cal8", num: "×", color:"orange"},
-            { id : "cal9", num: 4, color:"white"},
-            { id : "cal10", num: 5, color:"white"},
-            { id : "cal11", num: 6, color:"white"},
-            { id : "cal12", num: "-", color:"orange"},
-            { id : "cal13", num: 1, color:"white"},
-            { id : "cal14", num: 2, color:"white"},
-            { id : "cal15", num: 3, color:"white"},
-            { id : "cal16", num: "+", color:"orange"},
-            { id : "cal17", num: 0, color:"col-wide"},
-            { id : "cal18", num: ".", color:"white"},
-            { id : "cal19", num: "=", color:"orange"}],            
+            { id : "cal1", input: "AC", btnClass:"white"},
+            { id : "cal2", input: "+/-", btnClass:"white"},
+            { id : "cal3", input: "%", btnClass:"white"},
+            { id : "cal4", input: "÷", btnClass:"orange"},
+            { id : "cal5", input: 7, btnClass:"white"},
+            { id : "cal6", input: 8, btnClass:"white"},
+            { id : "cal7", input: 9, btnClass:"white"},
+            { id : "cal8", input: "×", btnClass:"orange"},
+            { id : "cal9", input: 4, btnClass:"white"},
+            { id : "cal10", input: 5, btnClass:"white"},
+            { id : "cal11", input: 6, btnClass:"white"},
+            { id : "cal12", input: "-", btnClass:"orange"},
+            { id : "cal13", input: 1, btnClass:"white"},
+            { id : "cal14", input: 2, btnClass:"white"},
+            { id : "cal15", input: 3, btnClass:"white"},
+            { id : "cal16", input: "+", btnClass:"orange"},
+            { id : "cal17", input: 0, btnClass:"col-wide"},
+            { id : "cal18", input: ".", btnClass:"white"},
+            { id : "cal19", input: "=", btnClass:"orange"}],            
             currentNumericInput: "",    
             outputDisplay : "",
             total : 0,
@@ -246,14 +246,14 @@ class Math extends Component {
                     <Output outputShow={this.state.outputDisplay || "0" }></Output>
                 </Row>
                 <Row>
-                    {  this.state.inputNumbers.map((btnSymbol,id) =>{
-                        //console.log("Index :" + id, btnSymbol)                
+                    {  this.state.inputNumbers.map((btnObject,id) =>{
+                              console.log({btnObject})       
                         return (                   
                         <Button 
-                        //reset = {this.inputNumbers[0].num}
-                        symbol={btnSymbol.num} 
-                        color={btnSymbol.color} 
-                        click = {()=>this.clickHandler(btnSymbol.num)}
+                        
+                        symbol={btnObject.input} 
+                        btnClass={btnObject.btnClass} 
+                        click = {()=>this.clickHandler(btnObject.input)}
                         key ={id}                
                         ></Button>                
                         );
