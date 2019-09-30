@@ -42,10 +42,7 @@ class Math extends Component {
 
        // "AC" button replace by "C" when input true
         const tempInputNumbers = this.state.inputNumbers
-        tempInputNumbers[0].num = 'C'            
-            this.setState({
-                inputNumbers : tempInputNumbers
-            })
+        
         //Check input---------------------------
          if(currentInputValue === "+" || currentInputValue === "-"||currentInputValue === "×" 
         || currentInputValue === "÷" || currentInputValue === "%"||currentInputValue === "="
@@ -68,7 +65,11 @@ class Math extends Component {
             })      
         } 
         else{
-            this.numericHandler(currentInputValue);        
+            this.numericHandler(currentInputValue); 
+            tempInputNumbers[0].num = 'C'            
+            this.setState({
+                inputNumbers : tempInputNumbers
+            })       
                      
         }  
     }
@@ -165,12 +166,29 @@ class Math extends Component {
     //================================Numeric Handler=================================================
     numericHandler = (num) => {
         console.log("numeric function activate")
+        let checkNumeric =  this.state.currentNumericInput.toString() + num.toString(); 
 
-        let checkNumeric = this.state.currentNumericInput + num;    
-        this.setState ({
+        
+        if(num > 0 && this.state.currentNumericInput === "0"){             
+          checkNumeric = num; 
+                 
+        }
+       /* if(num > 0 && this.state.currentNumericInput === ""){             
+            checkNumeric = 0;        
+         }*/
+
+      
+        if(num === "." && this.state.currentNumericInput===""){        
+            checkNumeric = "0.";
+            
+        }
+               
+        this.setState ({           
             currentNumericInput : checkNumeric
         })
+
         this.resultHandler(checkNumeric)
+         
     }
     //================================Result Handler=================================================
     resultHandler = (displayNum) => {
