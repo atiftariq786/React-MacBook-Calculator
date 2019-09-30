@@ -13,7 +13,7 @@ This is a Macbook basic calculator version based on some technologies given belo
 [Watch React MacBook Calculator Demo](https://atiftariq786.github.io)
 
 ##  :camera:App Images
-![alt text]("./macbookcalculator/src/assets/images/MacBookCal.png")
+![MacBook Calculator Image](https://github.com/atiftariq786/React-MacBook-Calculator/blob/master/macbookcalculator/src/assets/images/MacBookCal.png?raw=true)
 
 ## :hammer_and_wrench:Deployment Instructions
 To run this app on your machine, follow these instructions.
