@@ -1,5 +1,5 @@
 # React-MacBook-Calculator 
-This is a Macbook basic calculator version based on some new technologies given below.
+This is a Macbook basic calculator version based on some technologies given below. This app based on arhtematic features like addition,subtraction, multiplication, division, percentage, equal negate the displayed value and clear all. This app is fully responsive for desktop, tab and mobile users.   
 
 ##  :robot:Technologies Used
 *   **HTML5** and **CSS3** for page contentsand styling.
@@ -13,7 +13,7 @@ This is a Macbook basic calculator version based on some new technologies given 
 [Watch React MacBook Calculator Demo](https://atiftariq786.github.io)
 
 ##  :camera:App Images
-    ![alt text](")
+![alt text]("./macbookcalculator/src/assets/images/MacBookCal.png")
 
 ## :hammer_and_wrench:Deployment Instructions
 To run this app on your machine, follow these instructions.
