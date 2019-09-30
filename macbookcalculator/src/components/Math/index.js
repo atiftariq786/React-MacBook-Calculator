@@ -170,16 +170,18 @@ class Math extends Component {
 
         
         if(num > 0 && this.state.currentNumericInput === "0"){             
-          checkNumeric = num; 
-                 
+          checkNumeric = num;         
         }
       
+        if(num === "." && this.state.currentNumericInput===""){        
+            checkNumeric = "0.";  
+        }
+               
         this.setState ({           
             currentNumericInput : checkNumeric
         })
 
-        this.resultHandler(checkNumeric)
-         
+        this.resultHandler(checkNumeric)    
     }
     //================================Result Handler=================================================
     resultHandler = (displayNum) => {
