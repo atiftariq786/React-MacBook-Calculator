@@ -105,17 +105,21 @@ class Math extends Component {
         } 
          //Positive/ negative sign------------------------------
           if(operator === "+/-" ){
-            console.log("OperatorHandler pos/neg sign");      
+            console.log("OperatorHandler pos/neg sign");  
+            console.log("click-1")    
 
-            let positiveNegResult = (parseFloat(this.state.currentNumericInput) * -1 ); 
+            let positiveNegResult = (parseFloat(this.state.currentNumericInput) * -1 ).toString();
+            
             console.log(positiveNegResult)
             
             this.setState({
             prevOperator :this.equalHandler(operator) ,
+            currentNumericInput : positiveNegResult, 
             outputDisplay: positiveNegResult,
         
-            })              
-            return positiveNegResult;
+            })     
+            console.log("click-1")         
+           return positiveNegResult;
         }              
         //Percentage------------------------------
          if(operator === "%"){
@@ -166,17 +170,34 @@ class Math extends Component {
     //================================Numeric Handler=================================================
     numericHandler = (num) => {
         console.log("numeric function activate")
+
+
+        let dotCheck = this.state.currentNumericInput;
+
+        console.log({dotCheck});
+
         let checkNumeric =  this.state.currentNumericInput.toString() + num.toString(); 
 
+        if(num === "." && dotCheck.indexOf(".") !== -1){
+
+            checkNumeric = this.state.currentNumericInput.toString(); 
+        }
+        if(num === "." && this.state.currentNumericInput===""){        
+            checkNumeric = "0.";  
+          }
         
+        if(num === 0 && this.state.currentNumericInput === ""){             
+            checkNumeric = "0";         
+          }
+        
+        if(num === 0 && this.state.currentNumericInput === "0"){             
+            checkNumeric = "0";         
+          }
+
         if(num > 0 && this.state.currentNumericInput === "0"){             
           checkNumeric = num;         
         }
-      
-        if(num === "." && this.state.currentNumericInput===""){        
-            checkNumeric = "0.";  
-        }
-               
+                 
         this.setState ({           
             currentNumericInput : checkNumeric
         })
@@ -209,9 +230,9 @@ class Math extends Component {
         }
         if(operator === "+/-"){
             this.setState ({
-                prevOperator : "-"
+                prevOperator : ""
             })
-           return "-";
+           return null;
         }        
         return operator;       
     }
