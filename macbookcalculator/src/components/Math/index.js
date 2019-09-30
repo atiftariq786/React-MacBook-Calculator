@@ -169,8 +169,11 @@ class Math extends Component {
         let checkNumeric =  this.state.currentNumericInput.toString() + num.toString(); 
 
         
-        
-               
+        if(num > 0 && this.state.currentNumericInput === "0"){             
+          checkNumeric = num; 
+                 
+        }
+      
         this.setState ({           
             currentNumericInput : checkNumeric
         })
