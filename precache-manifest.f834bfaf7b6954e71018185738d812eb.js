@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a734c02498fdc043a22ba2e378e054b2",
+    "revision": "8c1d0a68ffc8d5b64506c9e6893920c9",
     "url": "/React-MacBook-Calculator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-MacBook-Calculator/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "550837b16957aef54067",
+    "revision": "bf3d47165fe674c865e3",
     "url": "/React-MacBook-Calculator/static/css/main.2750e613.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-MacBook-Calculator/static/js/2.16a1aa4a.chunk.js"
   },
   {
-    "revision": "550837b16957aef54067",
-    "url": "/React-MacBook-Calculator/static/js/main.328b09aa.chunk.js"
+    "revision": "bf3d47165fe674c865e3",
+    "url": "/React-MacBook-Calculator/static/js/main.b8389e82.chunk.js"
   },
   {
     "revision": "e4f0ef4878749ce9da94",
