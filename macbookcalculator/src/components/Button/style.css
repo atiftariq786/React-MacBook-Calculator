@@ -9,7 +9,7 @@
 .col-wide{
     color:black;
     min-width: 100%;
-    min-height: 16vh;
+    min-height:14.85vh;
     font-size: 70px;
     margin:0px 0px 0px 0px;
     padding:0px 0px 0px 0px;    
@@ -19,7 +19,7 @@
 }
 .orange{
     min-width: 100%;   
-    min-height: 16vh;
+    min-height:14.85vh;
     font-size: 70px;
     text-align: center;
     background: #f5923e;
@@ -30,7 +30,7 @@
 .white{
     color:black;
     min-width: 100%;
-    min-height: 16vh;
+    min-height: 14.85vh;
     font-size: 70px;
     margin:0px 0px 0px 0px;
     padding:0px 0px 0px 0px;    
@@ -39,3 +39,44 @@
     color: black;   
 
 }
+@media (min-height: 295px) {
+    .white, .orange, .col-wide {
+      font-size: 20px;
+      min-height:14.2vh;
+      
+      
+    }
+  }
+
+@media (min-height: 400px) {
+    .white, .orange, .col-wide {
+      font-size: 25px;
+      min-height:14.45vh;
+      
+      
+    }
+  }
+  
+  @media (min-height: 500px) {
+    .white, .orange, .col-wide {
+        font-size: 30px;
+        min-height:13.85vh;
+       
+      }
+  }
+  
+  @media (min-height: 600px) {
+    .white, .orange, .col-wide {
+        font-size: 40px;
+        min-height:14.85vh;
+        
+      }
+  }
+  
+  @media (min-height: 1000px) {
+    .white, .orange, .col-wide {
+        font-size: 70px;
+       
+      }
+  }
+  

@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;  
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background: rgb(29, 29, 29);
+    
+}
+
+h3{
+    color:white;   
+    margin-left: 15px;
+}
+
+h3:hover{
+    
+    color:orange;    
+    
+    
+}
+.navbar-light .navbar-brand { 
+    
+    color:orange;
+}
+
+.navbar-light .navbar-brand :hover {      
+    
+    color:blue;
+}

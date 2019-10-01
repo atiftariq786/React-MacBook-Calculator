@@ -4,6 +4,7 @@ import Container  from 'react-bootstrap/Container';
 import Row  from 'react-bootstrap/Row';
 import Button from '../Button/index';
 import Output from '../OutputDisplay/index';
+import Navbar from "../Navbar/index";
 import "./style.css";
 
 class Math extends Component {        
@@ -242,6 +243,7 @@ class Math extends Component {
         return (
                 
             <Container>
+                <Navbar/>  
                 <Row>
                     <Output outputShow={this.state.outputDisplay || "0" }></Output>
                 </Row>
