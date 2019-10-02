@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/React-MacBook-Calculator/static/css/main.2750e613.chunk.css",
-    "main.js": "/React-MacBook-Calculator/static/js/main.b8389e82.chunk.js",
-    "main.js.map": "/React-MacBook-Calculator/static/js/main.b8389e82.chunk.js.map",
+    "main.css": "/React-MacBook-Calculator/static/css/main.e1d8e7ce.chunk.css",
+    "main.js": "/React-MacBook-Calculator/static/js/main.0d23997b.chunk.js",
+    "main.js.map": "/React-MacBook-Calculator/static/js/main.0d23997b.chunk.js.map",
     "runtime~main.js": "/React-MacBook-Calculator/static/js/runtime~main.8041f7a3.js",
     "runtime~main.js.map": "/React-MacBook-Calculator/static/js/runtime~main.8041f7a3.js.map",
     "static/css/2.266e55a5.chunk.css": "/React-MacBook-Calculator/static/css/2.266e55a5.chunk.css",
-    "static/js/2.16a1aa4a.chunk.js": "/React-MacBook-Calculator/static/js/2.16a1aa4a.chunk.js",
-    "static/js/2.16a1aa4a.chunk.js.map": "/React-MacBook-Calculator/static/js/2.16a1aa4a.chunk.js.map",
+    "static/js/2.61f3620f.chunk.js": "/React-MacBook-Calculator/static/js/2.61f3620f.chunk.js",
+    "static/js/2.61f3620f.chunk.js.map": "/React-MacBook-Calculator/static/js/2.61f3620f.chunk.js.map",
     "index.html": "/React-MacBook-Calculator/index.html",
-    "precache-manifest.f834bfaf7b6954e71018185738d812eb.js": "/React-MacBook-Calculator/precache-manifest.f834bfaf7b6954e71018185738d812eb.js",
+    "precache-manifest.e98ac53e258a7302d7231f5349f1b3c2.js": "/React-MacBook-Calculator/precache-manifest.e98ac53e258a7302d7231f5349f1b3c2.js",
     "service-worker.js": "/React-MacBook-Calculator/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/React-MacBook-Calculator/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.2750e613.chunk.css.map": "/React-MacBook-Calculator/static/css/main.2750e613.chunk.css.map"
+    "static/css/main.e1d8e7ce.chunk.css.map": "/React-MacBook-Calculator/static/css/main.e1d8e7ce.chunk.css.map"
   }
 }
