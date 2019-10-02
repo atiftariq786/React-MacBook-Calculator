@@ -1,14 +1,15 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;  
+    justify-content: space-between; 
+    align-items: center; 
     width: 100%;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     background: rgb(29, 29, 29);
-    
+    height: 10vh;
 }
 
 h3{
+    font-size: 4vh;
     color:white;   
     margin-left: 15px;
 }
@@ -20,7 +21,7 @@ h3:hover{
     
 }
 .navbar-light .navbar-brand { 
-    
+    font-size: 4vh;
     color:orange;
 }
 

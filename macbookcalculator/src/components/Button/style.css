@@ -5,12 +5,11 @@
 .col-6 {
     padding:0px 0px 0px 0px;
 }
-
 .col-wide{
     color:black;
     min-width: 100%;
     min-height:14.85vh;
-    font-size: 70px;
+    font-size: 9vh;
     margin:0px 0px 0px 0px;
     padding:0px 0px 0px 0px;    
     text-align: center;
@@ -20,7 +19,7 @@
 .orange{
     min-width: 100%;   
     min-height:14.85vh;
-    font-size: 70px;
+    font-size: 9vh;
     text-align: center;
     background: #f5923e;
     color: #fff;  
@@ -31,7 +30,7 @@
     color:black;
     min-width: 100%;
     min-height: 14.85vh;
-    font-size: 70px;
+    font-size: 9vh;
     margin:0px 0px 0px 0px;
     padding:0px 0px 0px 0px;    
     text-align: center;
@@ -39,44 +38,3 @@
     color: black;   
 
 }
-@media (min-height: 295px) {
-    .white, .orange, .col-wide {
-      font-size: 20px;
-      min-height:14.2vh;
-      
-      
-    }
-  }
-
-@media (min-height: 400px) {
-    .white, .orange, .col-wide {
-      font-size: 25px;
-      min-height:14.45vh;
-      
-      
-    }
-  }
-  
-  @media (min-height: 500px) {
-    .white, .orange, .col-wide {
-        font-size: 30px;
-        min-height:13.85vh;
-       
-      }
-  }
-  
-  @media (min-height: 600px) {
-    .white, .orange, .col-wide {
-        font-size: 40px;
-        min-height:14.85vh;
-        
-      }
-  }
-  
-  @media (min-height: 1000px) {
-    .white, .orange, .col-wide {
-        font-size: 70px;
-       
-      }
-  }
-  

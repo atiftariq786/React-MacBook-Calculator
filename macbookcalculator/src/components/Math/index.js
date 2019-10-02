@@ -56,7 +56,7 @@ class Math extends Component {
         else if(currentInputValue === "C" || currentInputValue === "AC" ){
 
             console.log("All values cleared...! ")            
-            tempInputNumbers[0].num = 'AC';           
+            tempInputNumbers[0].input = 'AC';           
             this.setState({
                 currentNumericInput : "",
                 total : 0,
@@ -67,7 +67,7 @@ class Math extends Component {
         } 
         else{
             this.numericHandler(currentInputValue); 
-            tempInputNumbers[0].num = 'C'            
+            tempInputNumbers[0].input = 'C'            
             this.setState({
                 inputNumbers : tempInputNumbers
             })       

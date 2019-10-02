@@ -1,5 +1,5 @@
 # React-MacBook-Calculator 
-This is a Macbook basic calculator version based on some technologies given below. This app based on arhtematic features like addition,subtraction, multiplication, division, percentage, equal negate the displayed value and clear all. This app is fully responsive for desktop, tab and mobile users.   
+This is a Macbook basic calculator version using the technologies listed below.This app is fully responsive for desktop, tablet and mobile users.I consider this a 'basic' calculator because it does not take order of operations into account during the calculation. For example, normally 3+3*3 is 12 but entering this equation into this calculator will give you 18 because this calculator does operations left to right only. 3+3 = 6, and 6*3 = 18.I developed this app to practice React. 
 
 ##  :robot:Technologies Used
 *   **HTML5** and **CSS3** for page contentsand styling.
@@ -34,6 +34,6 @@ Atif Tariq
   :link:[Github](https://github.com/atiftariq786)
   :link:[Linkedin](https://www.linkedin.com/in/atif-tariq-5b00b089/)
 
-  NOTE: Please **fork** me on github and **endorsed** my skills on linkedin
+  NOTE: Please **fork** me on github and **endorse** my skills on linkedin.
    
     
