@@ -7,13 +7,11 @@
     background: rgb(29, 29, 29);
     height: 10vh;
 }
-
 h3{
     font-size: 4vh;
     color:white;   
     margin-left: 15px;
 }
-
 h3:hover{
     color:orange;  
 }
@@ -21,8 +19,6 @@ h3:hover{
     font-size: 2.5vh;
     color:orange;
 }
-
 .navbar-light .navbar-brand :hover {      
-    
     color:blue;
 }

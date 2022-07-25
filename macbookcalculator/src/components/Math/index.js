@@ -34,7 +34,7 @@ class Math extends Component {
     total: 0,
     prevOperator: "",
   };
-  //================================Click Handler=================================================
+  //================================Click Handler Function=================================================
   clickHandler = (input) => {
     console.log("Input value: " + input);
     let currentInputValue = input;
@@ -73,7 +73,7 @@ class Math extends Component {
       });
     }
   };
-  //================================Operator Handler=================================================
+  //================================Operator Handler Function=================================================
   operatorHandler = (operator) => {
     console.log("Operator function activate");
 
@@ -170,7 +170,7 @@ class Math extends Component {
       currentNumericInput: "",
     });
   };
-  //================================Numeric Handler=================================================
+  //================================Numeric Handler Function=================================================
   numericHandler = (num) => {
     console.log("numeric function activate");
 
@@ -206,7 +206,7 @@ class Math extends Component {
 
     this.resultHandler(checkNumeric);
   };
-  //================================Result Handler=================================================
+  //================================Result Handler Function=================================================
   resultHandler = (displayNum) => {
     console.log("Result function activate");
 
@@ -214,7 +214,7 @@ class Math extends Component {
       outputDisplay: displayNum,
     });
   };
-  //================================Equal Handler=================================================
+  //================================Equal Handler Function=================================================
   equalHandler = (operator) => {
     console.log("Equal function activate");
 
